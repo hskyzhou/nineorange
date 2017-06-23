@@ -1,0 +1,24 @@
+{
+    "name": "hskyzhou/9orange",
+    "description": "Laravel 5, 九橙短信",
+    "authors": [
+        {
+            "name": "hsky",
+            "email": "xezw211@126.com",
+            "homepage" : "http://hsky.me",
+            "role": "Developer"
+        }
+    ],
+    "support" :{
+    	"email" : "xezw211@126.com"
+    },
+    "require": {
+    	"php": ">=5.4",
+        "ixudra/curl": "6.*"
+    },
+    "autoload" : {
+    	"psr-4" : {
+    		"HskyZhou\\NineOrange\\" : "src"
+    	}
+    }
+}
