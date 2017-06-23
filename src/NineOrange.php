@@ -33,7 +33,7 @@
 			]);
 		}
 
-		public function sendOne($mobile, $verify_code, $time = 0)
+		public function sendOne($verify_code, $mobile, $time = 0)
 		{	
 			$params = array(
 			    'SpCode'=> config('nineorange.SpCode'),
