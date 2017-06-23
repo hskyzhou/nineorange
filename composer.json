@@ -1,6 +1,7 @@
 {
     "name": "hskyzhou/nineorange",
     "description": "Laravel 5, 九橙短信",
+    "license": "MIT",
     "authors": [
         {
             "name": "hsky",
