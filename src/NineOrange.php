@@ -64,7 +64,7 @@
 			    'SpCode'=> config('nineorange.SpCode'),
 			    'LoginName'=> config('nineorange.LoginName'),
 			    'Password'=> config('nineorange.Password'),
-			    'MessageContent'=> iconv("UTF-8", "GB2312//IGNORE", vsprintf($content, $data),
+			    'MessageContent'=> iconv("UTF-8", "GB2312//IGNORE", vsprintf($content, $data)),
 			    'UserNumber'=> $mobile,
 			    'SerialNumber'=> $time ?: time(),
 			    'ScheduleTime'=> config('nineorange.ScheduleTime'),
