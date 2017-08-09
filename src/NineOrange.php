@@ -75,9 +75,9 @@
 			$results = $this->send($params);
 
 			if($results['result']){
-				Log::info('[success]手机号:' . $mobile . '; 验证码: ' . $verify_code);
+				Log::info('[success]手机号:' . $mobile . '; 数据: ' . json_encode($data));
 			}else{
-				Log::info('[fail]手机号:' . $mobile . '; 验证码: ' . $verify_code);
+				Log::info('[fail]手机号:' . $mobile . '; 数据: ' . json_encode($data));
 			}
 
 			return $results;
