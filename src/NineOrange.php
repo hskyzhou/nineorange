@@ -57,6 +57,31 @@
 
 			return $results;
 		}
+
+		public function sendCustom($content, $data, $mobile, $time = 0)
+		{
+			$params = array(
+			    'SpCode'=> config('nineorange.SpCode'),
+			    'LoginName'=> config('nineorange.LoginName'),
+			    'Password'=> config('nineorange.Password'),
+			    'MessageContent'=> iconv("UTF-8", "GB2312//IGNORE", vsprintf($content, $data),
+			    'UserNumber'=> $mobile,
+			    'SerialNumber'=> $time ?: time(),
+			    'ScheduleTime'=> config('nineorange.ScheduleTime'),
+			    'ExtendAccessNum'=> config('nineorange.ExtendAccessNum'),
+			    'f'=> config('nineorange.f'),
+			);
+
+			$results = $this->send($params);
+
+			if($results['result']){
+				Log::info('[success]手机号:' . $mobile . '; 验证码: ' . $verify_code);
+			}else{
+				Log::info('[fail]手机号:' . $mobile . '; 验证码: ' . $verify_code);
+			}
+
+			return $results;
+		}
 		
 		/*发送请求*/
 		private function send($params){
